@@ -1,4 +1,4 @@
-package model;
+package org.mot.aleluia.model;
 
 public class Administration {
     //ATRIBUTOS

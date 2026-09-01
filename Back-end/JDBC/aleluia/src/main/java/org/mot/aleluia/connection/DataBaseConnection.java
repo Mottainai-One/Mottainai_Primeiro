@@ -1,4 +1,4 @@
-package connection;
+package org.mot.aleluia.connection;
 
 import io.github.cdimascio.dotenv.Dotenv;
 
