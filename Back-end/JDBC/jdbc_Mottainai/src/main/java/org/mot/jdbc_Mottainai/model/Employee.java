@@ -1,4 +1,4 @@
-package org.mot.aleluia.model;
+package org.mot.jdbc_Mottainai.model;
 
 public class Employee {
     //ATRIBUTOS

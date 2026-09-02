@@ -1,4 +1,4 @@
-package org.mot.aleluia;
+package org.mot.jdbc_Mottainai;
 
 import java.io.*;
 

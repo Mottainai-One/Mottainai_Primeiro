@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.mot</groupId>
-    <artifactId>aleluia</artifactId>
+    <artifactId>jdbc_Mottainai</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>aleluia</name>
     <packaging>war</packaging>

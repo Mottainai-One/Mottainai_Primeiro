@@ -1,4 +1,4 @@
-package org.mot.aleluia.connection;
+package org.mot.jdbc_Mottainai.connection;
 
 import io.github.cdimascio.dotenv.Dotenv;
 
