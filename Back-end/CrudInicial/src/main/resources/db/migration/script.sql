@@ -180,7 +180,7 @@ insert into Employee (CPF, Name, Surname, BirthDate, EmploymentDate, StoreCode) 
  
 insert into UserAccount (Username, Email, Password, RegistrationDate, LastAccess, Status, Position, EmployeeCPF) values
 ('breno_admin', 'breno@plataforma.com', 'senhaSegura123', '2026-06-17', '2026-06-18 16:40:37', 'Ativo', 'Gerente', '11122233344'),
-('clara_usuario', 'clara@cliente.com', 'mudar@12345', '2026-06-18', '2026-06-18 11:26:56', 'Ativo', 'Estoquista', '55566677788');
+('clara_usuario', 'clara@cliente.com', 'mzudar@12345', '2026-06-18', '2026-06-18 11:26:56', 'Ativo', 'Estoquista', '55566677788');
  
 insert into Administration (Email, Password) values
 ('mottainaiestoque@institutojef.org.br', 'MottainaiLegal123');
