@@ -22,8 +22,8 @@ public class MainInsertUserAccount {
         LocalDate dt = LocalDate.parse("2010-10-02");
         LocalDate dt1 = LocalDate.parse("2010-10-02");
 
-        Company company = new Company("12345678901234", "McDonald", "Empresa de alimentos", "mc@gmail.com",dt1, "SP", "José Irineu", "São Paulo", "Jagurá","12345678" ,"12345678", "alimentos" );
-        Store store = new Store(3, "jbs@gmail.com","Loja JBS","Administração", "978119845","Ativo", "123", "Joé Ordom", "São Paulo", "raguaja","12345678", "SP", "alimentos gostosos",  company);
+        Company company = new Company("12345678901234", "McDonald", "Empresa de FastFood", "mcDonald@gmail.com",dt1, "SP", "José Irineu", "São Paulo", "Jagurá","12345678" ,"12345678", "Empresa de Alimentos" );
+        Store store = new Store(3, "jbs@gmail.com","Loja JBS","Administração", "978119845","Ativo", "123", "Joé Ordom", "São Paulo", "Guarujá","12345678", "SP", "Empresa de Alimentos",  company);
         Employee employee = new Employee("13263893893", "Patrick", "Jane", data00,dt, store);
 
 

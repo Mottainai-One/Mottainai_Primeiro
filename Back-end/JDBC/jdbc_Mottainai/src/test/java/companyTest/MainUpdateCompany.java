@@ -9,7 +9,7 @@ public class MainUpdateCompany {
     public static void main(String[] args) {
 
         LocalDate data = LocalDate.parse("2026-09-01");
-        Company company = new Company("12345678901234", "JBS Brasil", "casa", "jbsBrasil@gmail.com", data, "PE", "Jardim Rosinha", "Recife", "Casuza", "12365487", "8888", "Alimentos");
+        Company company = new Company("12345678901234", "JBS Brasil", "Prédio", "jbsBrasil@gmail.com", data, "PE", "Casuza", "Recife", "Jardim Rosinha", "12365487", "8888", "Empresa Nacional de Alimentos");
         CompanyDAO companyDAO = new CompanyDAO();
 
         companyDAO.update(company);

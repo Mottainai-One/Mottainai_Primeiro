@@ -10,7 +10,7 @@ public class MainInsertSubscriptionPlan {
     public static void main(String[] args) {
 
         LocalDate data = LocalDate.parse("2026-02-02");
-        Company company = new Company("12345678901234", "JBS Global", "prédio", "jbsGlobal@gmail.com", data, "SP","Irineu José Bordom", "São Paulo", "Vila Jaguaré", "97999999", "9999", "Empresa de Alimentos globais" );
+        Company company = new Company("12345678901234", "JBS Global", "prédio", "jbsGlobal@gmail.com", data, "SP","Irineu José Bordom", "São Paulo", "Vila Jaguaré", "97999999", "9999", "Empresa Internacional de Alimentos" );
 
         SubscriptionPLanDAO subscriptionPLanDAO = new SubscriptionPLanDAO();
         LocalDate data1 = LocalDate.parse("2026-02-01");
