@@ -27,6 +27,7 @@ public class DataBaseConnection {// classe que vai referenciar minha conexão co
             throw new RuntimeException ("Ocorereu um erro");
         }
     }
+
     //unico metodo de entrada para a conexao com o banco
     public static DataBaseConnection getInstance() {
         if (Objects.isNull(instance)){
