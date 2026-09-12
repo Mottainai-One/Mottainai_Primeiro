@@ -1,27 +1,29 @@
 package org.mot.jdbc_Mottainai.model;
 
+import java.time.LocalDate;
+
 public class SubscriptionPlan {
     //ATRIBUTOS
     private int id;
     private String description;
     private String status;
-    private String registrationDate;
+    private LocalDate registrationDate;
     private double price;
     private int storeLimit;
     private Company company;
     //CONSTRUTOR
-    public SubscriptionPlan(String registrationDate, double price, int storeLimit, Company company) {
+    public SubscriptionPlan(LocalDate registrationDate, double price, int storeLimit, Company company) {
         this.registrationDate = registrationDate;
         this.price = price;
         this.storeLimit = storeLimit;
         this.company = company;
     }
     //SOBRECARGA
-    public SubscriptionPlan(int id, String description, String status, String registrationDate, double price, int storeLimit, Company company) {
+    public SubscriptionPlan( int id, String description, String status, LocalDate registrationDate, double price, int storeLimit, Company company) {
         this.id = id;
         this.description = description;
         this.status = status;
-        this.registrationDate = registrationDate;
+        this.registrationDate = registrationDate; // está como date e é criationDate
         this.price = price;
         this.storeLimit = storeLimit;
         this.company = company;
@@ -39,7 +41,7 @@ public class SubscriptionPlan {
         return status;
     }
 
-    public String getRegistrationDate() {
+    public LocalDate getRegistrationDate() {
         return registrationDate;
     }
 
@@ -55,6 +57,11 @@ public class SubscriptionPlan {
         return company;
     }
     //SETTERS
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public void setDescription(String description) {
         this.description = description;
     }
@@ -63,7 +70,7 @@ public class SubscriptionPlan {
         this.status = status;
     }
 
-    public void setRegistrationDate(String registrationDate) {
+    public void setRegistrationDate(LocalDate registrationDate) {
         this.registrationDate = registrationDate;
     }
 
@@ -77,6 +84,19 @@ public class SubscriptionPlan {
 
     public void setCompany(Company company) {
         this.company = company;
+    }
+
+    //toString
+    public String toString(){
+        return "------------ SUBSCRIPTION PLAN ------------"+ "\n"+
+                "ID: "+ this.id+ "\n"+
+                "Description: "+ this.description+ "\n"+
+                "Status: "+ this.status+"\n"+
+                "Registration Date: "+ this.registrationDate+ "\n"+
+                "Price: R$"+ this.price+"\n"+
+                "Store Limit: "+ this.storeLimit+"\n"+
+                "Company: "+ this.company+"\n"+
+                "-------------------------------------------";
     }
 }
 

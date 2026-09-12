@@ -8,16 +8,16 @@ public class Store {
     private String department;
     private String telephone;
     private String status;
-    private int number;
+    private String number;
     private String street;
     private String city;
     private String neighborhood;
-    private int zipCode;
+    private String zipCode;
     private String state;
     private String description;
     private Company company;
     //CONSTRUTOR
-    public Store(String email, String telephone, int number, int zipCode, Company company) {
+    public Store(String email, String telephone, String number, String zipCode, Company company) {
         this.email = email;
         this.telephone = telephone;
         this.number = number;
@@ -25,7 +25,7 @@ public class Store {
         this.company = company;
     }
     //SOBRECARGA
-    public Store(int storeCode, String email, String complement, String department, String telephone, String status, int number, String street, String city, String neighborhood, int zipCode, String state, String description, Company company) {
+    public Store(int storeCode, String email, String complement, String department, String telephone, String status, String number, String street, String city, String neighborhood, String zipCode, String state, String description, Company company) {
         this.storeCode = storeCode;
         this.email = email;
         this.complement = complement;
@@ -66,7 +66,7 @@ public class Store {
         return status;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
@@ -82,7 +82,7 @@ public class Store {
         return neighborhood;
     }
 
-    public int getZipCode() {
+    public String getZipCode() {
         return zipCode;
     }
 
@@ -118,7 +118,7 @@ public class Store {
         this.status = status;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
@@ -134,7 +134,7 @@ public class Store {
         this.neighborhood = neighborhood;
     }
 
-    public void setZipCode(int zipCode) {
+    public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
 
@@ -148,5 +148,26 @@ public class Store {
 
     public void setCompany(Company company) {
         this.company = company;
+    }
+
+    //toString
+    public String toString(){
+        return "------------- STORE -------------"+ "\n"+
+                "Store Code: "+ this.storeCode+"\n"+
+                "Email: "+ this.email+"\n"+
+                "Complement: "+ this.email+"\n"+
+                "Department: "+ this.department+ "\n"+
+                "Telephone: "+ this.telephone+"\n"+
+                "Status: "+ this.status +"\n"+
+                "Number: "+ this.number+"\n"+
+                "Street: "+ this.street+ "\n"+
+                "City: "+ this.city+ "\n"+
+                "Neighborhood: "+ this.neighborhood+"\n"+
+                "Zip Code: "+ this.zipCode + "\n"+
+                "State: "+ this.state+"\n"+
+                "Description: "+ this.description+"\n"+
+                "Company: "+ this.company+"\n"+
+                "---------------------------------";
+
     }
 }

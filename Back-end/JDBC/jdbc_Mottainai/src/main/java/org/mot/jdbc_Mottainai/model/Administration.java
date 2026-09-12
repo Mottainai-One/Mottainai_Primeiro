@@ -37,4 +37,13 @@ public class Administration {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    //toString
+    public String toString(){
+        return "---------- ADMINISTRATION ----------"+"\n"+
+                "ID: "+ this.id+"\n"+
+                "Email: "+ this.email+ "\n"+
+                "Password: "+ this.password+ "\n"+
+                "-----------------------------------";
+    }
 }

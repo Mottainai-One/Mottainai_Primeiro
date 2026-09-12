@@ -1,26 +1,29 @@
 package org.mot.jdbc_Mottainai.model;
 
-public class User {
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class UserAccount {
     //ATRIBUTOS
     private int id;
     private String userName;
     private String email;
     private String password;
-    private String registrationDate;
-    private String lastAcces;
+    private LocalDate registrationDate; // no banco está e "date"
+    private LocalDateTime lastAcces; // no baco está timestamp
     private String status;
     private String position;
-    private Employee employee;
+    private Employee employeeCpf;
     //CONSTRUTOR
-    public User(String userName, String email, String password, Employee employee, String position) {
+    public UserAccount(String userName, String email, String password, Employee employeeCpf, String position) {
         this.userName = userName;
         this.email = email;
         this.password = password;
-        this.employee = employee;
+        this.employeeCpf = employeeCpf;
         this.position = position;
     }
     //SOBRECARGA
-    public User(int id, String userName, String email, String password, String registrationDate, String lastAcces, String status, String position, Employee employee) {
+    public UserAccount(int id, String userName, String email, String password, LocalDate registrationDate, LocalDateTime lastAcces, String status, String position, Employee employeeCpf) {
         this.id = id;
         this.userName = userName;
         this.email = email;
@@ -29,7 +32,7 @@ public class User {
         this.lastAcces = lastAcces;
         this.status = status;
         this.position = position;
-        this.employee = employee;
+        this.employeeCpf = employeeCpf;
     }
     //GETTERS
     public int getId() {
@@ -48,11 +51,11 @@ public class User {
         return password;
     }
 
-    public String getRegistrationDate() {
+    public LocalDate getRegistrationDate() {
         return registrationDate;
     }
 
-    public String getLastAcces() {
+    public LocalDateTime getLastAcces() {
         return lastAcces;
     }
 
@@ -64,8 +67,8 @@ public class User {
         return position;
     }
 
-    public Employee getEmployee() {
-        return employee;
+    public Employee getEmployeeCpf() {
+        return employeeCpf;
     }
     //SETTERS
     public void setUserName(String userName) {
@@ -80,11 +83,11 @@ public class User {
         this.password = password;
     }
 
-    public void setRegistrationDate(String registrationDate) {
+    public void setRegistrationDate(LocalDate registrationDate) {
         this.registrationDate = registrationDate;
     }
 
-    public void setLastAcces(String lastAcces) {
+    public void setLastAcces(LocalDateTime lastAcces) {
         this.lastAcces = lastAcces;
     }
 
@@ -96,7 +99,22 @@ public class User {
         this.position = position;
     }
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
+    public void setEmployee(Employee employeeCpf) {
+        this.employeeCpf = employeeCpf;
+    }
+
+    //toString
+    public String toString(){
+        return "----------- USER -----------"+ "\n"+
+                "ID: "+ this.id+ "\n"+
+                "User name: "+ this.userName+ "\n"+
+                "Email: "+ this.email+"\n"+
+                "Password: "+ this.password+ "\n"+
+                "Registration Date: "+ this.registrationDate+ "\n"+
+                "Last Access: "+ this.lastAcces+ "\n"+
+                "Status: "+ this.status+ "\n"+
+                "Position: "+ this.position+ "\n"+
+                "Employee: "+ this.employeeCpf+ "\n"+
+                "----------------------------";
     }
 }

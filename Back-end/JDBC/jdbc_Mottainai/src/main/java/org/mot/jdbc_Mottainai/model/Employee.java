@@ -1,31 +1,33 @@
 package org.mot.jdbc_Mottainai.model;
 
+import java.time.LocalDate;
+
 public class Employee {
     //ATRIBUTOS
-    private int cpf;
+    private String cpf;
     private String name;
     private String surname;
-    private String birthDate;
-    private String employmentDate;
+    private LocalDate birthDate;
+    private LocalDate employmentDate;
     private Store store;
     //CONSTRUTOR
-    public Employee(int cpf, String name, String surname, Store store) {
+    public Employee(String cpf, String name, String surname, Store store) {
         this.cpf = cpf;
         this.name = name;
         this.surname = surname;
         this.store = store;
     }
     //SOBRECARGA
-    public Employee(int cpf, String name, String surname, String birthDate, String employmentDate, Store store) {
+    public Employee(String cpf, String name, String surname, LocalDate birthDate, LocalDate employmentDate, Store store) {
         this.cpf = cpf;
         this.name = name;
         this.surname = surname;
-        this.birthDate = birthDate;
-        this.employmentDate = employmentDate;
+        this.birthDate = birthDate; // está date no banco
+        this.employmentDate = employmentDate; // no banco está date
         this.store = store;
     }
     //GETTERS
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
@@ -37,11 +39,11 @@ public class Employee {
         return surname;
     }
 
-    public String getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    public String getEmploymentDate() {
+    public LocalDate getEmploymentDate() {
         return employmentDate;
     }
 
@@ -51,5 +53,17 @@ public class Employee {
     //SETTERS
     public void setStore(Store store) {
         this.store = store;
+    }
+
+    //toString
+    public String toString(){
+        return "------------- EMPLYOEE ------------"+"\n"+
+                "CPF: "+ this.cpf+"\n"+
+                "Name: "+ this.name+"\n"+
+                "Surname: "+ this.surname+"\n"+
+                "Birth Date: "+ this.birthDate+"\n"+
+                "Employment Date: "+ this.employmentDate+"\n"+
+                "Store: "+ this.store+"\n"+
+                "-----------------------------------";
     }
 }
